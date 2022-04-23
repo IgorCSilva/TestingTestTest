@@ -13,7 +13,7 @@ jobs:
           pkg-manager: npm
       - run:
           command: npm run test
-          name: Test Application
+          name: Test Application Develop2
       # - run:
       #     command: npm run build
       #     name: Build App
@@ -26,8 +26,8 @@ jobs:
 workflows:
   my_workflow:
     jobs:
-      - build_and_test:
-          filters:
-            branches:
-              only:
-                - master
+      - build_and_test
+          # filters:
+          #   branches:
+          #     only:
+          #       - master
