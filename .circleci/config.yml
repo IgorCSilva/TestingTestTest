@@ -1,10 +1,12 @@
 version: 2
 
-jobs:
-  build:
-    docker:
-      - image: circle/node:14.18.1
-    steps:
-      - checkout
-      - run: npm install
-      - run: npm test
+workflows:
+  testing_node_ci:
+    jobs:
+      - build:
+          docker:
+            - image: circle/node:14.18.1
+          steps:
+            - checkout
+            - run: npm install
+            - run: npm test
