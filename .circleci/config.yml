@@ -14,9 +14,9 @@ jobs:
       - run:
           command: npm run test
           name: Test App    
-      - run:
-          command: npm run build
-          name: Build App
+      # - run:
+      #     command: npm run build
+      #     name: Build App
       
       - persist_to_workspace:
           root: ~/project
