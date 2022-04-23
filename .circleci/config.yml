@@ -28,13 +28,5 @@ workflows:
     jobs:
       - build_and_test:
           filters:
-              branches:
-                  only: develop
-
-      # - build:
-      #     docker:
-      #       - image: circle/node:14.18.1
-      #     steps:
-      #       - checkout
-      #       - run: npm install
-      #       - run: npm test
+            branches:
+              only: develop
