@@ -26,7 +26,7 @@ jobs:
 workflows:
   my_workflow:
     jobs:
-      - build_and_test
+      - build_and_test:
           filters:
             branches:
               only: 
