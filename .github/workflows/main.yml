@@ -1,15 +1,14 @@
-# - name: Trigger CircleCI Pipeline
-#   uses: CircleCI-Public/trigger-circleci-pipeline-action@v1.0.4
 
 on:
-  push:
-    branches:
-      - master
+  # push:
+  #   branches:
+  #     - master
   pull_request:
-    types:
-      - opened
+    # types:
+    #   - opened
     branches:    
-      - 'master'
+      - develop
+
   workflow_dispatch:
 
 env:
