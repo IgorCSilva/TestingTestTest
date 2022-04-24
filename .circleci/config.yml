@@ -58,7 +58,8 @@ workflows:
   #   jobs:
   #     - test_git
   test_my_app:
-    when:
-      equal: [ "", << pipeline.parameters.GHA_Event >>]
     jobs:
-      - build_and_test
+      - build_and_test:
+          filters:
+            branches:
+              only: develop
