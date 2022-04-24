@@ -6,7 +6,7 @@ on:
     types:
       - opened
     branches:    
-      - 'releases/**'
+      - 'master'
 
 jobs:
   trigger-circleci:
