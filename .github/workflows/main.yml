@@ -2,6 +2,9 @@
 #   uses: CircleCI-Public/trigger-circleci-pipeline-action@v1.0.4
 
 on:
+  push:
+    branches:
+      - master
   pull_request:
     types:
       - opened
@@ -19,7 +22,8 @@ jobs:
   check-application:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Get code
+        uses: actions/checkout@v3
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
