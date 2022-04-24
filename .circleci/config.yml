@@ -54,11 +54,11 @@ jobs:
   #         force: true # force push when pushing to the heroku remote, see: https://devcenter.heroku.com/articles/git
 
 workflows:
-  wf1:
-    jobs:
-      - test_git
+  # wf1:
+  #   jobs:
+  #     - test_git
   test_my_app:
     when:
-      equal: [ "pull_request", << pipeline.parameters.GHA_Event >>]
+      equal: [ "", << pipeline.parameters.GHA_Event >>]
     jobs:
       - build_and_test
