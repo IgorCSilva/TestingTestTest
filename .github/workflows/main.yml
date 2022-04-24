@@ -1,0 +1,19 @@
+# - name: Trigger CircleCI Pipeline
+#   uses: CircleCI-Public/trigger-circleci-pipeline-action@v1.0.4
+
+on:
+  pull_request:
+    types:
+      - opened
+    branches:    
+      - 'releases/**'
+
+jobs:
+  trigger-circleci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: custom-trigger
+        id: trigger001
+        uses: CircleCI-Public/trigger-circleci-pipeline-action@v1.0.4
+        env:
+          CCI_TOKEN: 9cb7ee62c2cc6ca235fe5171a55d51ec57bc43e0
